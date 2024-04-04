@@ -6,12 +6,8 @@ import NavBar from './components/NavBar';
 function App() {
   const [pokemonIndex, SetPokemonIndex] = useState(0);
 
-  const handleClickIncrement = () => {
-    SetPokemonIndex(pokemonIndex +1)
-  }
-
-  const handleClickDecrement = () => {
-    SetPokemonIndex(pokemonIndex -1)
+  const handleClick = (index) => {
+    SetPokemonIndex(index)
   }
 
   const pokemonList = [
@@ -44,7 +40,7 @@ function App() {
     <>
       <div>
         <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-        <NavBar handleClickDecrement={handleClickDecrement} handleClickIncrement={handleClickIncrement} pokemonIndex={pokemonIndex} pokemonList={pokemonList}/>
+        <NavBar pokemonList={pokemonList} handleClick={handleClick}/>
       </div>
     </>
   )

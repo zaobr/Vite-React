@@ -1,4 +1,8 @@
-function NavBar({pokemonList, handleClick}){
+function NavBar({pokemonList, pokemonIndex, handleClick}){
+    if(pokemonList[pokemonIndex].name == "pikachu"){
+        window.alert("pika pikachu !!!")
+    }
+
 
     return(
         <>
